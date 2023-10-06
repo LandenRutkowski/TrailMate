@@ -1,0 +1,44 @@
+plugins {
+	id 'com.android.application'
+	id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+
+android {
+	defaultConfig {
+		compileSdk = 33
+		buildToolsVersion = "34.0.0"
+		applicationId("com.example.trailmate")
+		minSdkVersion(24)
+		targetSdkVersion(33)
+		versionCode = 1
+		versionName = "1.0"
+		vectorDrawables.useSupportLibrary = true
+	}
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_17
+		targetCompatibility JavaVersion.VERSION_17
+	}
+	namespace('com.example.trailmate')
+}
+
+
+dependencies {
+	implementation(fileTree(include: ['*.jar'], dir: 'libs'))
+
+	constraints {
+		implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+			because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+		}
+		implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+			because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+		}
+	}
+	implementation("com.google.android.gms:play-services-location:$rootProject.playServicesLocationVersion")
+	implementation("com.google.android.gms:play-services-maps:$rootProject.playServicesMapsVersion")
+	implementation("androidx.appcompat:appcompat:$rootProject.appcompatVersion")
+	implementation("androidx.activity:activity:$rootProject.activityVersion")
+	implementation("androidx.preference:preference:$rootProject.preferenceVersion")
+	testImplementation("junit:junit:$rootProject.junitLibVersion")
+	androidTestImplementation("androidx.test.ext:junit:$rootProject.junitVersion")
+	androidTestImplementation("androidx.test.espresso:espresso-core:$rootProject.espressoVersion")
+}
