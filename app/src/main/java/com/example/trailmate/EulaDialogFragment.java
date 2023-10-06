@@ -11,17 +11,18 @@ import androidx.fragment.app.DialogFragment;
 import androidx.preference.PreferenceManager;
 import com.example.trailmate.R;
 
-/**
- * Created by adamcchampion on 2014/09/22.
+/*
+ * Code from Github (Adam Champion):
+ * https://github.com/acchampion/WhereAmI
  */
 public class EulaDialogFragment extends DialogFragment {
 
     public void setEulaAccepted() {
         Activity activity = requireActivity();
-		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
-		SharedPreferences.Editor editor = prefs.edit();
-		editor.putBoolean(getString(R.string.eula_accepted_key), true).apply();
-	}
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(getString(R.string.eula_accepted_key), true).apply();
+    }
 
     @NonNull
     @Override
@@ -32,10 +33,10 @@ public class EulaDialogFragment extends DialogFragment {
                 .setMessage(Utils.fromHtml(getString(R.string.eula)))
                 .setPositiveButton(R.string.accept, (dialog, id) -> setEulaAccepted())
                 .setNegativeButton(R.string.decline, (dialog, which) -> {
-					dialog.cancel();
-					requireActivity().finish();
-					System.exit(1);
-				});
+                    dialog.cancel();
+                    requireActivity().finish();
+                    System.exit(1);
+                });
         return builder.create();
     }
 }

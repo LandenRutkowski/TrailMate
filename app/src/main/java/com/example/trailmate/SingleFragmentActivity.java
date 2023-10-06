@@ -9,6 +9,12 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.trailmate.R;
 
+/*
+ * Code from Github (Adam Champion):
+ * https://github.com/acchampion/WhereAmI
+ */
+
+
 public abstract class SingleFragmentActivity extends AppCompatActivity {
 
     protected abstract Fragment createFragment();

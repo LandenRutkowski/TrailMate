@@ -10,6 +10,6 @@ public class Utils {
      * https://stackoverflow.com/questions/37904739/html-fromhtml-deprecated-in-android-n
      */
     public static Spanned fromHtml(String htmlStr) {
-		return Html.fromHtml(htmlStr, Html.FROM_HTML_MODE_LEGACY);
-	}
+        return Html.fromHtml(htmlStr, Html.FROM_HTML_MODE_LEGACY);
+    }
 }
