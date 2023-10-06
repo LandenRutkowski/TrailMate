@@ -31,4 +31,6 @@ ext {
 	junitLibVersion = "4.13.2"
 	junitVersion = "1.1.5"
 	espressoVersion = "3.5.1"
+	lifecycle_version = "2.6.2"
+	timber_version = "5.0.1"
 }

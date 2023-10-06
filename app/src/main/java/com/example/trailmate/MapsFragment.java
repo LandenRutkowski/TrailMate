@@ -11,6 +11,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 import com.example.trailmate.R;
 
+import timber.log.Timber;
+
 /**
  * Class for Maps Fragment. Sources:
  * - Big Nerd Ranch Guide to Android Programming, Chap. 34
@@ -21,16 +23,19 @@ import com.example.trailmate.R;
  */
 
 public class MapsFragment extends SupportMapFragment {
+    private final static String TAG = MapsFragment.class.getSimpleName();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Timber.tag(TAG).d("onCreate");
         setHasOptionsMenu(true);
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        Timber.tag(TAG).d("onResume");
         setUpEula();
     }
 
@@ -38,6 +43,7 @@ public class MapsFragment extends SupportMapFragment {
     @Override
     public void onStart() {
         super.onStart();
+        Timber.tag(TAG).d("onStart");
         Activity activity = requireActivity();
         activity.invalidateOptionsMenu();
     }
@@ -45,9 +51,11 @@ public class MapsFragment extends SupportMapFragment {
     @Override
     public void onStop() {
         super.onStop();
+        Timber.tag(TAG).d("onStop");
     }
 
     private void setUpEula() {
+        Timber.tag(TAG).d("setUpEula");
         FragmentActivity activity = requireActivity();
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(activity);

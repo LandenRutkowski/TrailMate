@@ -1,6 +1,7 @@
 package com.example.trailmate;
 
 import android.app.Application;
+import timber.log.Timber;
 
 /**
  * Based on adamcchampion.
@@ -15,6 +16,8 @@ public class TrailApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Timber.plant(new Timber.DebugTree()); //Google said to ignore, version issue
+        Timber.tag(TAG).d("onCreate");
     }
 
 }
