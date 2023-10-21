@@ -57,4 +57,13 @@
         android:text="Show User Details"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/idBtnMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idBtnShowData"
+        android:layout_margin="10dp"
+        android:text="Show Map"
+        android:textAllCaps="false" />
+
 </RelativeLayout>

@@ -14,7 +14,7 @@
 
     <application
         android:allowBackup="true"
-		android:name="com.example.trailmate.TrailApplication"
+		android:name="com.example.trailmate.MainActivity"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
@@ -37,7 +37,7 @@
 
 <!--    <application-->
 <!--            android:allowBackup="true"-->
-<!--    		android:name="com.example.trailmate.TrailApplication"-->
+<!--    		android:name="com.example.trailmate.MainActivity"-->
 <!--            android:icon="@drawable/ic_launcher"-->
 <!--            android:label="@string/app_name"-->
 <!--            android:theme="@style/AppTheme">-->
