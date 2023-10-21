@@ -2,6 +2,8 @@ package com.example.trailmate;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.trailmate.fragments.MapsFragment;
+
 import timber.log.Timber;
 
 /**
