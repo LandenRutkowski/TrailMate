@@ -16,4 +16,8 @@
     <string name="decline">Decline</string>
     <string name="google_play_text_key">google_play_text</string>
     <string name="title_activity_maps2">NewMaps</string>
+    <string name="login">Login</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
 </resources>
