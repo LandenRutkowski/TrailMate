@@ -33,4 +33,12 @@ public class TrailInfo {
     public Bitmap[] getPhotos() {
         return photos;
     }
+
+    public void setTrailName(String trailName) {
+        this.trailName = trailName;
+    }
+
+    public void setTrailLength(String trailLength) {
+        this.trailLength = trailLength;
+    }
 }

@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".TrailsActivity">
 
-    <!--EditText for adding-->
     <EditText
-        android:id="@+id/idEdtUsername"
+        android:id="@+id/idTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -17,53 +16,40 @@
         android:importantForAutofill="no"
         android:inputType="textPersonName" />
 
-    <!--EditText for-->
     <EditText
-        android:id="@+id/idEdtPassword"
+        android:id="@+id/idLength"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idEdtUsername"
+        android:layout_below="@id/idTitle"
         android:layout_margin="10dp"
         android:hint="Enter password"
         android:importantForAutofill="no"
         android:inputType="textPassword" />
 
-    <!--EditText for adding-->
-    <EditText
-        android:id="@+id/idEdtEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/idEdtPassword"
-        android:layout_margin="10dp"
-        android:hint="Enter email"
-        android:inputType="textEmailAddress" />
-
-    <!--Button for adding data to Firebase-->
     <Button
-        android:id="@+id/idBtnSendData"
+        android:id="@+id/idSendData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idEdtEmail"
+        android:layout_below="@id/idLength"
         android:layout_margin="10dp"
-        android:text="Add User Details"
+        android:text="Add Trail Details"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/idBtnShowData"
+        android:id="@+id/idDeleteData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idBtnSendData"
+        android:layout_below="@id/idSendData"
         android:layout_margin="10dp"
-        android:text="Show User Details"
+        android:text="Delete Trail Details"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/idBtnTrails"
+        android:id="@+id/backBtn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idBtnShowData"
+        android:layout_below="@id/idDeleteData"
         android:layout_margin="10dp"
-        android:text="Show Trails"
-        android:textAllCaps="false" />
+        android:text="Go Back" />
 
 </RelativeLayout>

@@ -16,4 +16,8 @@
     <string name="decline">Decline</string>
     <string name="google_play_text_key">google_play_text</string>
     <string name="title_activity_maps2">NewMaps</string>
+    <string name="email">Hello</string>
+    <string name="username">Hello</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

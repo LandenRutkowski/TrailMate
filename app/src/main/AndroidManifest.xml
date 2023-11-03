@@ -14,12 +14,12 @@
 
     <application
         android:allowBackup="true"
-		android:name="com.example.trailmate.MainActivity"
+		android:name="com.example.trailmate.MainApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.trailmate.MapsActivity"
+            android:name="com.example.trailmate.MainActivity"
             android:label="@string/title_activity_maps"
 			android:exported="true">
             <intent-filter>
@@ -28,7 +28,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".TrailsActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+            android:name=".UserActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
