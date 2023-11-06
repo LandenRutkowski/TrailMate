@@ -11,8 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:hint="Enter Username"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Trail Name"
         android:importantForAutofill="no"
         android:inputType="textPersonName" />
 
@@ -22,9 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/idTitle"
         android:layout_margin="10dp"
-        android:hint="Enter password"
+        android:hint="Enter Trail Length"
         android:importantForAutofill="no"
-        android:inputType="textPassword" />
+        android:inputType="numberSigned" />
 
     <Button
         android:id="@+id/idSendData"

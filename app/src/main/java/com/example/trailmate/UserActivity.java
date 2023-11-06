@@ -46,7 +46,7 @@ public class UserActivity extends AppCompatActivity {
     }
 
     private void getData() {
-        databaseReference.child("Users").child("0").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Users").child("1").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String username = snapshot.child("username").getValue(String.class);
