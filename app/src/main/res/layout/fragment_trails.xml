@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrailsActivity">
+
+    <EditText
+        android:id="@+id/idTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Trail Name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/idLength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTitle"
+        android:layout_margin="10dp"
+        android:hint="Enter Trail Length"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/idSendData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idLength"
+        android:layout_margin="10dp"
+        android:text="Add Trail Details"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idDeleteData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idSendData"
+        android:layout_margin="10dp"
+        android:text="Delete Trail Details"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/backBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idDeleteData"
+        android:layout_margin="10dp"
+        android:text="Go Back" />
+
+</RelativeLayout>

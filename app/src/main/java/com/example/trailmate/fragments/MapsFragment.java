@@ -1,4 +1,4 @@
-package com.example.trailmate;
+package com.example.trailmate.fragments;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -7,9 +7,8 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.PreferenceManager;
 
-import com.google.android.gms.maps.SupportMapFragment;
-
 import com.example.trailmate.R;
+import com.google.android.gms.maps.SupportMapFragment;
 
 import timber.log.Timber;
 

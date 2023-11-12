@@ -1,8 +1,34 @@
-<androidx.fragment.app.FragmentContainerView
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/map"
-    tools:context="trailmate.com.example.trailmate.MapsActivity"
-    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".UserActivity">
+
+	<!--EditText for adding-->
+	<TextView
+		android:id="@+id/username"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_margin="10dp"
+		android:text="Username" />
+
+	<TextView
+		android:id="@+id/email"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/username"
+		android:layout_margin="10dp"
+		android:text="Email" />
+
+	<Button
+		android:id="@+id/backBtn"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/email"
+		android:layout_margin="10dp"
+		android:text="Go Back" />
+
+</RelativeLayout>

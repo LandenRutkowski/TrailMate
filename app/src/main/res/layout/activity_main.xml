@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--EditText for adding-->
+    <EditText
+        android:id="@+id/idEdtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:hint="Enter Username"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName" />
+
+    <!--EditText for-->
+    <EditText
+        android:id="@+id/idEdtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtUsername"
+        android:layout_margin="10dp"
+        android:hint="Enter password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword" />
+
+    <!--EditText for adding-->
+    <EditText
+        android:id="@+id/idEdtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtPassword"
+        android:layout_margin="10dp"
+        android:hint="Enter email"
+        android:inputType="textEmailAddress" />
+
+    <!--Button for adding data to Firebase-->
+    <Button
+        android:id="@+id/idBtnSendData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtEmail"
+        android:layout_margin="10dp"
+        android:text="Add User Details"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idBtnShowData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idBtnSendData"
+        android:layout_margin="10dp"
+        android:text="Show User Details"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idBtnTrails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idBtnShowData"
+        android:layout_margin="10dp"
+        android:text="Show Trails"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

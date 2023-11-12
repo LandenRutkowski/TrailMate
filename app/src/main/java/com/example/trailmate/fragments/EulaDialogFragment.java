@@ -1,4 +1,4 @@
-package com.example.trailmate;
+package com.example.trailmate.fragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 import androidx.preference.PreferenceManager;
 import com.example.trailmate.R;
+import com.example.trailmate.Utils;
 
 import timber.log.Timber;
 
