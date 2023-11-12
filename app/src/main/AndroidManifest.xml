@@ -33,6 +33,11 @@
             android:label="@string/title_activity_maps">
         </activity>
         <activity
+            android:name="com.example.trailmate.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".UserActivity"
             android:label="@string/title_activity_maps">
         </activity>
