@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.startup.AppInitializer;
 
 import com.example.trailmate.models.UserInfo;
 import com.google.firebase.database.DataSnapshot;
@@ -19,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import timber.log.Timber;
+
+import com.mapbox.maps.loader.MapboxMapsInitializer;
 
 /**
  * Based on adamcchampion.
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Timber.plant(new Timber.DebugTree()); //Google said to ignore, version issue
         Timber.tag(TAG).d("onCreate");
+
         setContentView(R.layout.activity_main);
 
         employeeUsernameEdt = findViewById(R.id.idEdtUsername);
@@ -75,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Mapbox
+        AppInitializer.getInstance(this)
+                .initializeComponent(MapboxMapsInitializer.class);
+
 
 
         showData.setOnClickListener(new View.OnClickListener() {
@@ -90,9 +98,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                //Activity activity = requireActivity();
                 //startActivity(new Intent(getApplicationContext(), TrailsActivity.class));
-                startActivity(new Intent(getApplicationContext(), MapsActivity.class));
+
+                //startActivity(new Intent(getApplicationContext(), MapsActivity2.class));
+                startActivity(new Intent(getApplicationContext(), HostActivity.class));
+                //activity.finish();
             }
         });
     }

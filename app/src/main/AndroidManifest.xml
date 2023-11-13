@@ -33,9 +33,11 @@
             android:label="@string/title_activity_maps">
         </activity>
         <activity
-            android:name="com.example.trailmate.MapsActivity"
-            android:label="@string/title_activity_maps"
-            android:exported="true">
+            android:name=".HostActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+            android:name=".MapsActivity2">
         </activity>
         <activity
             android:name=".UserActivity"
@@ -43,8 +45,8 @@
         </activity>
 
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="" />
+            android:name="com.mapbox.token"
+            android:value="pk.eyJ1IjoibXVoYW1tYWQtb3N1IiwiYSI6ImNsbHBpdGsycTA1aWIzb25ycHNrNHU4czcifQ.yCtRVuGZSVJlsZQ4g3i4ww" />
     </application>
 
 <!--    <application-->
@@ -55,7 +57,7 @@
 <!--            android:theme="@style/AppTheme">-->
 
 <!--        <activity-->
-<!--            android:name="com.example.trailmate.MapsActivity"-->
+<!--            android:name="com.example.trailmate.MapsActivity2"-->
 <!--            android:label="@string/title_activity_maps"-->
 <!--            android:exported="true">-->
 <!--            <intent-filter>-->
