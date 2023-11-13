@@ -11,11 +11,14 @@ import timber.log.Timber;
 
 import android.app.Activity;
 import android.content.Context;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.appcompat.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -41,6 +44,7 @@ import com.mapbox.maps.plugin.locationcomponent.OnIndicatorBearingChangedListene
 import com.mapbox.maps.plugin.locationcomponent.OnIndicatorPositionChangedListener;
 import com.mapbox.maps.plugin.locationcomponent.generated.LocationComponentSettings;
 
+import java.io.IOException;
 import java.util.List;
 
 import kotlin.Unit;
@@ -61,6 +65,7 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
     private LocationComponentPlugin mLocationPlugin;
     private GesturesPlugin mGesturesPlugin;
     private final String TAG = getClass().getSimpleName();
+    private SearchView mSearchView;
 
     @Nullable
     @Override
@@ -75,8 +80,37 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
         MapboxMap mMapboxMap = mMapView.getMapboxMap();
         setupMap(mMapboxMap);
 
+        mSearchView = (SearchView) v.findViewById(R.id.search_view);
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                searchLocation(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
 
         return v;
+    }
+
+    private void searchLocation(String location) {
+        Geocoder geocoder = new Geocoder(requireContext());
+        List<Address> addresses = null;
+        try {
+            addresses = geocoder.getFromLocationName(location, 1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Address address = addresses.get(0);
+        double lat = address.getLatitude();
+        double lng = address.getLongitude();
+        Point point = Point.fromLngLat(lng, lat);
+        onIndicatorPositionChanged(point);
     }
 
 //    @Override
