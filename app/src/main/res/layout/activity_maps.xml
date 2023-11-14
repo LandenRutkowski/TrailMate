@@ -16,15 +16,15 @@
 		mapbox:mapbox_resourcesAccessToken="pk.eyJ1IjoibXVoYW1tYWQtb3N1IiwiYSI6ImNsbHBpdGsycTA1aWIzb25ycHNrNHU4czcifQ.yCtRVuGZSVJlsZQ4g3i4ww"
 		/>
 
-
 	<Button
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="10sp"
-		android:layout_marginEnd="10sp"
-		android:layout_alignParentBottom="true"
 		android:id="@+id/draw_path"
-		android:text="Draw_path"/>
+		android:layout_width="161dp"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginStart="270sp"
+		android:layout_marginEnd="10sp"
+		android:layout_marginBottom="19dp"
+		android:text="Draw_path" />
 
 	<androidx.appcompat.widget.SearchView
 		android:id="@+id/search_view"

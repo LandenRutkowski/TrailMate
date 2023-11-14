@@ -45,25 +45,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/idEdtEmail"
         android:layout_margin="10dp"
-        android:text="Add User Details"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/idBtnShowData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/idBtnSendData"
-        android:layout_margin="10dp"
-        android:text="Show User Details"
+        android:text="Create Account"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/idBtnTrails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idBtnShowData"
+        android:layout_below="@id/idBtnSendData"
         android:layout_margin="10dp"
-        android:text="Show Trails"
+        android:text="Aleady have account? Login"
         android:textAllCaps="false" />
 
 </RelativeLayout>
