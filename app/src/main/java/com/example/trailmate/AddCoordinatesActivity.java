@@ -47,7 +47,7 @@ public class AddCoordinatesActivity extends AppCompatActivity {
                 // Save the title, latitude, and longitude to Firebase
                 String id = mRef.push().getKey();
                 Coordinate coordinate = new Coordinate(title, latitude, longitude, description);
-                mRef.child(id).setValue(coordinate);
+                mRef.child(title).setValue(coordinate);
 
                 Toast.makeText(AddCoordinatesActivity.this, "Coordinates added", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CoordinatesListActivity.class));
