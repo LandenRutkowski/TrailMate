@@ -43,6 +43,7 @@ dependencies {
 	// When using the BoM, don't specify versions in Firebase dependencies
 	implementation 'com.google.firebase:firebase-analytics'
 	implementation 'com.google.firebase:firebase-database:20.3.0'
+	implementation("com.google.firebase:firebase-storage")
 
 	// Mapbox dependencies for maps
 	implementation("com.mapbox.maps:android:$rootProject.mapbox_sdk_version")

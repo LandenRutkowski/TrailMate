@@ -18,13 +18,12 @@
 
 
 	<Button
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="10sp"
-		android:layout_marginEnd="10sp"
+		android:layout_margin="16dp"
 		android:layout_alignParentBottom="true"
 		android:id="@+id/draw_path"
-		android:text="Draw_path"/>
+		android:text="saved_coordinates"/>
 
 	<androidx.appcompat.widget.SearchView
 		android:id="@+id/search_view"
@@ -32,5 +31,16 @@
 		android:layout_height="wrap_content"
 		android:layout_margin="16dp"
 		/>
+
+
+	<Button
+		android:id="@+id/add_coordinates"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Add Coordinates"
+		android:layout_margin="16dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentEnd="true"/>
+
 
 </RelativeLayout>

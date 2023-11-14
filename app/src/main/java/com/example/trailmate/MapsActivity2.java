@@ -11,6 +11,7 @@ import timber.log.Timber;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -19,6 +20,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.appcompat.widget.SearchView;
+
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -67,6 +70,11 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
     private final String TAG = getClass().getSimpleName();
     private SearchView mSearchView;
 
+    private  Button mShowCoordinatesButton;
+    private Button mAddCoordinatesButton;
+
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -80,10 +88,12 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
         MapboxMap mMapboxMap = mMapView.getMapboxMap();
         setupMap(mMapboxMap);
 
+
         mSearchView = (SearchView) v.findViewById(R.id.search_view);
         mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                Toast.makeText(requireContext(), "Query: " + query, Toast.LENGTH_SHORT).show();
                 searchLocation(query);
                 return false;
             }
@@ -91,6 +101,38 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
             @Override
             public boolean onQueryTextChange(String newText) {
                 return false;
+            }
+        });
+
+        double latitude = getActivity().getIntent().getDoubleExtra("latitude", 0);
+        double longitude = getActivity().getIntent().getDoubleExtra("longitude", 0);
+        if (latitude != 0 && longitude != 0) {
+            Point point = Point.fromLngLat(longitude, latitude);
+            CameraOptions cameraOptions = new CameraOptions.Builder()
+                    .center(point)
+                    .zoom(14.0)
+                    .build();
+            mMapboxMap.setCamera(cameraOptions);
+        } else {
+            initLocation();
+        }
+
+        mAddCoordinatesButton = (Button) v.findViewById(R.id.add_coordinates);
+        mAddCoordinatesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AddCoordinatesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        mShowCoordinatesButton = (Button) v.findViewById(R.id.draw_path);
+        mShowCoordinatesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), CoordinatesListActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -147,6 +189,7 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
         mMapView = null;
     }
 
+
     @Override
     public void onExplanationNeeded(List<String> permissionsToExplain) {
         final Context ctx = requireContext();
@@ -158,7 +201,7 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
         if (granted) {
             Timber.d(TAG, "Location permission granted");
             Toast.makeText(requireContext(), "User granted location permission", Toast.LENGTH_SHORT).show();
-            initLocation();
+            //initLocation();
             setupGesturesListener();
         } else {
             Timber.d(TAG, "User denied location permission");
@@ -209,6 +252,7 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
 
     @Override
     public boolean onMove(@NonNull MoveGestureDetector moveGestureDetector) {
+
         return false;
     }
 
@@ -237,7 +281,7 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
 
     @Override
     public void onStyleDataLoaded(@NonNull StyleDataLoadedEventData styleDataLoadedEventData) {
-        initLocation();
+        //initLocation();
         setupGesturesListener();
     }
 
