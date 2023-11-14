@@ -20,7 +20,7 @@ import timber.log.Timber;
 
 public class HostActivity extends AppCompatActivity {
 
-    private Button logout, showTrails;
+    private Button logout;
     private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,6 @@ public class HostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_host);
 
         logout = findViewById(R.id.logout);
-        showTrails = findViewById(R.id.showTrails);
         auth = FirebaseAuth.getInstance();
 
         if (savedInstanceState == null) {
@@ -43,14 +42,6 @@ public class HostActivity extends AppCompatActivity {
 
                 auth.signOut();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            }
-        });
-
-        showTrails.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(getApplicationContext(), PhotoActivity.class));
             }
         });
     }

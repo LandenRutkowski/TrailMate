@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         userInfo.setEmail(email);
 
         FirebaseUser user = auth.getCurrentUser();
-        userInfo.setUserID(Integer.parseInt(user.getUid()));
+        userInfo.setUserID(user.getUid());
         String child = String.valueOf(userInfo.getUserID());
 
         databaseReference.addValueEventListener(new ValueEventListener() {

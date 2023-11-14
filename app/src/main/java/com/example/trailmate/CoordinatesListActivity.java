@@ -63,6 +63,7 @@ public class CoordinatesListActivity extends AppCompatActivity {
                 intent.putExtra("title", coordinate.getTitle());
                 intent.putExtra("latitude", coordinate.getLatitude());
                 intent.putExtra("longitude", coordinate.getLongitude());
+                intent.putExtra("description", coordinate.getDescription());
                 startActivity(intent);
             }
         });
