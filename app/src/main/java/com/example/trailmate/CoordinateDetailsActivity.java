@@ -24,6 +24,7 @@ public class CoordinateDetailsActivity extends AppCompatActivity {
         mTitleTextView = findViewById(R.id.title_text_view);
         mLatitudeTextView = findViewById(R.id.latitude_text_view);
         mLongitudeTextView = findViewById(R.id.longitude_text_view);
+        mDescriptionTextView = findViewById(R.id.description_text_view);
 
         String title = getIntent().getStringExtra("title");
         double latitude = getIntent().getDoubleExtra("latitude", 0);

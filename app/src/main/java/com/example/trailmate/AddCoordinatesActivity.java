@@ -33,7 +33,7 @@ public class AddCoordinatesActivity extends AppCompatActivity {
         mTitleEditText = findViewById(R.id.title_edit_text);
         mLatitudeEditText = findViewById(R.id.latitude_edit_text);
         mLongitudeEditText = findViewById(R.id.longitude_edit_text);
-        mDescriptionEditText = findViewById(R.id.longitude_edit_text);
+        mDescriptionEditText = findViewById(R.id.description_edit_text);
         mSaveButton = findViewById(R.id.save_button);
 
         mSaveButton.setOnClickListener(new View.OnClickListener() {
@@ -46,8 +46,8 @@ public class AddCoordinatesActivity extends AppCompatActivity {
 
                 // Save the title, latitude, and longitude to Firebase
                 String id = mRef.push().getKey();
-                Coordinate coordinate = new Coordinate(title, latitude, longitude);
-                mRef.child(id).setValue(coordinate);
+                Coordinate coordinate = new Coordinate(title, latitude, longitude, description);
+                mRef.child(title).setValue(coordinate);
 
                 Toast.makeText(AddCoordinatesActivity.this, "Coordinates added", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), CoordinatesListActivity.class));

@@ -8,7 +8,7 @@ public class Coordinate {
     public Coordinate() {
     }
 
-    public Coordinate(String title, double latitude, double longitude) {
+    public Coordinate(String title, double latitude, double longitude, String description) {
         this.title = title;
         this.latitude = latitude;
         this.longitude = longitude;
