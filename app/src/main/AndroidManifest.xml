@@ -14,12 +14,12 @@
 
     <application
         android:allowBackup="true"
-		android:name="com.example.trailmate.MainApplication"
+		android:name=".MainApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.trailmate.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_maps"
 			android:exported="true">
             <intent-filter>
@@ -33,13 +33,40 @@
             android:label="@string/title_activity_maps">
         </activity>
         <activity
+            android:name=".HostActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+            android:name=".PhotoActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+            android:name=".MapsActivity2">
+        </activity>
+        <activity
             android:name=".UserActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+            android:name=".AddCoordinatesActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+            android:name=".CoordinatesListActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+            android:name=".CoordinateDetailsActivity"
             android:label="@string/title_activity_maps">
         </activity>
 
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="" />
+            android:name="com.mapbox.token"
+            android:value="pk.eyJ1IjoibXVoYW1tYWQtb3N1IiwiYSI6ImNsbHBpdGsycTA1aWIzb25ycHNrNHU4czcifQ.yCtRVuGZSVJlsZQ4g3i4ww" />
     </application>
 
 <!--    <application-->
@@ -50,7 +77,7 @@
 <!--            android:theme="@style/AppTheme">-->
 
 <!--        <activity-->
-<!--            android:name="com.example.trailmate.MapsActivity"-->
+<!--            android:name="com.example.trailmate.MapsActivity2"-->
 <!--            android:label="@string/title_activity_maps"-->
 <!--            android:exported="true">-->
 <!--            <intent-filter>-->

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	<com.mapbox.maps.MapView
+		xmlns:tools="http://schemas.android.com/tools"
+		xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/map_view_location"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		mapbox:mapbox_cameraTargetLat="41.0000"
+		mapbox:mapbox_cameraTargetLng="-81.0000"
+		mapbox:mapbox_cameraZoom="13.0"
+		mapbox:mapbox_resourcesAccessToken="pk.eyJ1IjoibXVoYW1tYWQtb3N1IiwiYSI6ImNsbHBpdGsycTA1aWIzb25ycHNrNHU4czcifQ.yCtRVuGZSVJlsZQ4g3i4ww"
+		/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="16dp"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/draw_path"
+		android:text="Saved Trails"/>
+
+	<androidx.appcompat.widget.SearchView
+		android:id="@+id/search_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="16dp"
+		/>
+
+
+	<Button
+		android:id="@+id/add_coordinates"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Add Trails"
+		android:layout_margin="16dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>
