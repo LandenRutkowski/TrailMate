@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 //startActivity(new Intent(getApplicationContext(), MapsActivity2.class));
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 //activity.finish();
+
             }
         });
     }
