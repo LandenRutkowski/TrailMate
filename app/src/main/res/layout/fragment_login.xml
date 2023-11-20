@@ -8,31 +8,32 @@
 
     <!--EditText for-->
     <EditText
-        android:id="@+id/idPassword"
+        android:id="@+id/idEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
-        android:hint="Enter Password"
+        android:hint="Enter Email"
         android:importantForAutofill="no"
-        android:inputType="textPassword" />
+        android:inputType="textEmailAddress" />
 
     <!--EditText for adding-->
     <EditText
-        android:id="@+id/idEmail"
+        android:id="@+id/idPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idPassword"
+        android:layout_below="@id/idEmail"
         android:layout_margin="10dp"
-        android:hint="Enter Email"
-        android:inputType="textEmailAddress" />
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+         />
 
     <!--Button for adding data to Firebase-->
     <Button
         android:id="@+id/idLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idEmail"
+        android:layout_below="@id/idPassword"
         android:layout_margin="10dp"
         android:text="Login"
         android:textAllCaps="false" />
