@@ -30,11 +30,24 @@ public class AddCoordinatesActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("Coordinates");
 
+
         mTitleEditText = findViewById(R.id.title_edit_text);
         mLatitudeEditText = findViewById(R.id.latitude_edit_text);
         mLongitudeEditText = findViewById(R.id.longitude_edit_text);
         mDescriptionEditText = findViewById(R.id.description_edit_text);
         mSaveButton = findViewById(R.id.save_button);
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            double latitude = intent.getDoubleExtra("latitude", 0);
+            double longitude = intent.getDoubleExtra("longitude", 0);
+            String title = intent.getStringExtra("title");
+
+            // Autofill EditText fields
+            mLatitudeEditText.setText(String.valueOf(latitude));
+            mLongitudeEditText.setText(String.valueOf(longitude));
+            mTitleEditText.setText(title);
+        }
 
         mSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
