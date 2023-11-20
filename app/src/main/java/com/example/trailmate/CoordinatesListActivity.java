@@ -105,14 +105,30 @@ public class CoordinatesListActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String newTitle = editTextTitle.getText().toString().trim();
-                double newLatitude = Double.parseDouble(editTextLatitude.getText().toString().trim());
-                double newLongitude = Double.parseDouble(editTextLongitude.getText().toString().trim());
+                String newLatitudeText = editTextLatitude.getText().toString().trim();
+                String newLongitudeText = editTextLongitude.getText().toString().trim();
                 String newDescription = editTextDescription.getText().toString().trim();
 
+                // Check and update individual fields
                 if (!TextUtils.isEmpty(newTitle)) {
-                    updateCoordinate(title, newTitle, newLatitude, newLongitude, newDescription);
-                    alertDialog.dismiss();
+                    updateCoordinate(title, newTitle, latitude, longitude, description);
                 }
+
+                if (!TextUtils.isEmpty(newLatitudeText)) {
+                    double newLatitude = Double.parseDouble(newLatitudeText);
+                    updateCoordinate(title, title, newLatitude, longitude, description);
+                }
+
+                if (!TextUtils.isEmpty(newLongitudeText)) {
+                    double newLongitude = Double.parseDouble(newLongitudeText);
+                    updateCoordinate(title, title, latitude, newLongitude, description);
+                }
+
+                if (!TextUtils.isEmpty(newDescription)) {
+                    updateCoordinate(title, title, latitude, longitude, newDescription);
+                }
+
+                alertDialog.dismiss();
             }
         });
 

@@ -67,6 +67,7 @@ public class CoordinateDetailsActivity extends AppCompatActivity {
                 Intent intent = new Intent(CoordinateDetailsActivity.this, HostActivity.class);
                 intent.putExtra("latitude", latitude);
                 intent.putExtra("longitude", longitude);
+                intent.putExtra("title", title);
                 startActivity(intent);
             }
         });
