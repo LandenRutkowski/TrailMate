@@ -22,7 +22,7 @@
 		android:layout_margin="16dp"
 		android:layout_alignParentBottom="true"
 		android:id="@+id/draw_path"
-		android:text="Saved Trails"/>
+		android:text="@string/saved_trails"/>
 
 	<androidx.appcompat.widget.SearchView
 		android:id="@+id/search_view"
@@ -36,7 +36,7 @@
 		android:id="@+id/add_coordinates"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Add Trails"
+		android:text="@string/add_trails"
 		android:layout_margin="16dp"
 		android:layout_alignParentBottom="true"
 		android:layout_alignParentEnd="true"/>

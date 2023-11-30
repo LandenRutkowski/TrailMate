@@ -12,15 +12,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AddCoordinatesActivity extends AppCompatActivity {
-    private EditText mTitleEditText;
-    private EditText mLatitudeEditText;
-    private EditText mLongitudeEditText;
-    private EditText mDescriptionEditText;
-    private Button mSaveButton;
+public class AddCoordinatesActivity extends MenuActivity {
+    EditText mTitleEditText;
+    EditText mLatitudeEditText;
+    EditText mLongitudeEditText;
+    EditText mDescriptionEditText;
+    Button mSaveButton;
 
-    private FirebaseDatabase mDatabase;
-    private DatabaseReference mRef;
+    FirebaseDatabase mDatabase;
+    DatabaseReference mRef;
 
 
     @Override

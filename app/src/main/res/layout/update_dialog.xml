@@ -8,38 +8,38 @@
         android:id="@+id/editTextTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="title"/>
+        android:hint="@string/title"/>
 
     <EditText
         android:id="@+id/editTextLatitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="latitude"
+        android:hint="@string/latitude"
         android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/editTextLongitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="longitude"
+        android:hint="@string/longitude"
         android:inputType="numberDecimal"/>
     <EditText
         android:id="@+id/editTextDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="description"
+        android:hint="@string/description"
         android:inputType="text"/>
 
     <Button
         android:id="@+id/buttonUpdateCoordinate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="update"/>
+        android:text="@string/update"/>
 
     <Button
         android:id="@+id/buttonDeleteCoordinate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="delete"/>
+        android:text="@string/delete"/>
 
 </LinearLayout>

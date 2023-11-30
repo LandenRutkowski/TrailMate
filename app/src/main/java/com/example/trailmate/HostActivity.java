@@ -1,24 +1,27 @@
 package com.example.trailmate;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
-import com.example.trailmate.fragments.MapsFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
-import timber.log.Timber;
+import java.util.Locale;
 
 /**
  * Based on adamcchampion.
  * Created by Muhammad Abedeljaber and Landen Rutkowski, 2023/10/05.
  */
 
-public class HostActivity extends AppCompatActivity {
+public class HostActivity extends MenuActivity {
 
     private Button logout;
     private FirebaseAuth auth;
@@ -45,4 +48,7 @@ public class HostActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 }

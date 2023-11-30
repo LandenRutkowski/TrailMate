@@ -36,7 +36,7 @@ import com.mapbox.maps.loader.MapboxMapsInitializer;
 
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends MenuActivity {
     private final static String TAG = MainActivity.class.getSimpleName();
     private EditText employeeUsernameEdt, employeePasswordEdt, employeeEmailEdt;
     private Button sendData, trails;
