@@ -15,7 +15,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.trailmate.models.Coordinate;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,20 +33,24 @@ public class CoordinatesListActivity extends AppCompatActivity {
     private FirebaseDatabase mDatabase;
     private DatabaseReference mRef;
     private ArrayList<Coordinate> mCoordinatesList;
-    private ArrayAdapter<Coordinate> mAdapter;
+    private CoordinateAdapter mAdapter;
+    private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coordinates_list);
 
-        mListView = findViewById(R.id.list_view);
+        //mListView = findViewById(R.id.list_view);
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("Coordinates");
         mCoordinatesList = new ArrayList<>();
+        mAdapter = new CoordinateAdapter(mCoordinatesList);
+        mRecyclerView = findViewById(R.id.recycler_view);
 
-        mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mCoordinatesList);
-        mListView.setAdapter(mAdapter);
+
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(mAdapter);
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -61,9 +68,22 @@ public class CoordinatesListActivity extends AppCompatActivity {
             }
         });
 
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Coordinate coordinate = mCoordinatesList.get(position);
+//                Intent intent = new Intent(CoordinatesListActivity.this, CoordinateDetailsActivity.class);
+//                intent.putExtra("title", coordinate.getTitle());
+//                intent.putExtra("latitude", coordinate.getLatitude());
+//                intent.putExtra("longitude", coordinate.getLongitude());
+//                intent.putExtra("description", coordinate.getDescription());
+//                startActivity(intent);
+//            }
+//        });
+
+        mAdapter.setOnItemClickListener(new CoordinateAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(int position) {
                 Coordinate coordinate = mCoordinatesList.get(position);
                 Intent intent = new Intent(CoordinatesListActivity.this, CoordinateDetailsActivity.class);
                 intent.putExtra("title", coordinate.getTitle());
@@ -74,12 +94,20 @@ public class CoordinatesListActivity extends AppCompatActivity {
             }
         });
 
-        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//                Coordinate coordinate = mCoordinatesList.get(position);
+//                showUpdateDeleteDialog(coordinate.getTitle(), coordinate.getLatitude(), coordinate.getLongitude(), coordinate.getDescription());
+//            return false;
+//            }
+//        });
+
+        mAdapter.setOnItemLongClickListener(new CoordinateAdapter.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemLongClick(int position) {
                 Coordinate coordinate = mCoordinatesList.get(position);
                 showUpdateDeleteDialog(coordinate.getTitle(), coordinate.getLatitude(), coordinate.getLongitude(), coordinate.getDescription());
-            return false;
             }
         });
     }

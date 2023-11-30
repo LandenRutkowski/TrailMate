@@ -1,4 +1,4 @@
-package com.example.trailmate;
+package com.example.trailmate.models;
 public class Coordinate {
     private String title;
     private double latitude;

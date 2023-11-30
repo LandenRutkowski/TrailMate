@@ -1,33 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/background_light">
 
     <TextView
         android:id="@+id/title_text_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2c3e50"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/latitude_text_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#34495e"
+        android:layout_marginBottom="4dp" />
 
     <TextView
         android:id="@+id/longitude_text_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="#34495e"
+        android:layout_marginBottom="4dp" />
 
     <TextView
         android:id="@+id/description_text_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="#7f8c8d"
+        android:layout_marginBottom="8dp"/>
 
     <Button
         android:id="@+id/show_on_map_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show on Map" />
+        android:text="Show on Map"
+        android:background="#3498db"
+        android:textColor="#ffffff"
+        android:elevation="4dp"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>

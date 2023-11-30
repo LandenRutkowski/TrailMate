@@ -1,90 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-    >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0">
 
-<EditText
-    android:id="@+id/title_edit_text"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:autofillHints="@null"
-    android:elevation="4dp"
-    android:hint="Trail Title"
-    android:inputType="text"
-    android:minHeight="?actionBarSize"
-    android:paddingHorizontal="16dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    />
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginTop="8dp"
-    android:elevation="4dp"
-    android:padding="16dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/title_edit_text"
-    >
-
+    <!-- Trail Title EditText -->
     <EditText
-        android:id="@+id/latitude_edit_text"
+        android:id="@+id/title_edit_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Latitude"
-        android:inputType="numberSigned|numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <EditText
-        android:id="@+id/longitude_edit_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Longitude"
-        android:inputType="numberSigned|numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/latitude_edit_text"
-        />
-
-    <EditText
-        android:id="@+id/description_edit_text"
-
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_margin="8dp"
-        android:hint="Description"
+        android:layout_margin="16dp"
+        android:autofillHints="@null"
+        android:elevation="4dp"
+        android:hint="Trail Title"
         android:inputType="text"
+        android:minHeight="?actionBarSize"
+        android:paddingHorizontal="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/longitude_edit_text"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-        android:id="@+id/save_button"
-        android:layout_width="match_parent"
+    <!-- Details Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="save"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_edit_text"/>
-        />
+        app:layout_constraintTop_toBottomOf="@+id/title_edit_text">
 
+        <!-- Latitude EditText -->
+        <EditText
+            android:id="@+id/latitude_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Latitude"
+            android:inputType="numberSigned|numberDecimal"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Longitude EditText -->
+        <EditText
+            android:id="@+id/longitude_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Longitude"
+            android:inputType="numberSigned|numberDecimal"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/latitude_edit_text" />
 
+        <!-- Description EditText -->
+        <EditText
+            android:id="@+id/description_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:hint="Description"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/longitude_edit_text" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:background="#009688"
+            android:textColor="#ffffff"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_edit_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

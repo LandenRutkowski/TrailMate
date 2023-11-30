@@ -4,38 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
 
-    <!--EditText for-->
+    <!-- Email EditText -->
     <EditText
         android:id="@+id/idEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:hint="Enter Email"
         android:importantForAutofill="no"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textColorHint="#757575"
+        android:backgroundTint="#009688" />
 
-    <!--EditText for adding-->
+    <!-- Password EditText -->
     <EditText
         android:id="@+id/idPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idEmail"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:hint="Enter Password"
         android:inputType="textPassword"
-         />
+        android:textColorHint="#757575"
+        android:backgroundTint="#009688" />
 
-    <!--Button for adding data to Firebase-->
+    <!-- Login Button -->
     <Button
         android:id="@+id/idLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idPassword"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:text="Login"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:background="#009688"
+        android:textColor="#ffffff"
+        android:elevation="4dp"
+        android:padding="12dp" />
 
 </RelativeLayout>
