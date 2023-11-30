@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_margin="16dp"
-        android:hint="Username"
+        android:hint="@string/enter_username"
         android:background="#ffffff"
         android:padding="12dp"
         android:importantForAutofill="no"
