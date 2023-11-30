@@ -12,12 +12,16 @@ import timber.log.Timber;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +68,7 @@ import com.mapbox.maps.viewannotation.ViewAnnotationManager;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -253,26 +258,7 @@ public class MapsActivity2 extends Fragment implements PermissionsListener, OnSt
         onIndicatorPositionChanged(point);
     }
 
-//    @Override
-//    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-//        super.onCreateOptionsMenu(menu, inflater);
-//        inflater.inflate(R.menu.menu_maps, menu);
-//    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        final int itemId = item.getItemId();
-        final Activity activity = requireActivity();
-        if (itemId == R.id.menu_showcurrentlocation) {
-            if (!PermissionsManager.areLocationPermissionsGranted(requireContext())) {
-                mPermissionsManager.requestLocationPermissions(activity);
-            } else {
-                MapboxMap map = mMapView.getMapboxMap();
-                setupMap(map);
-            }
-        }
-        return false;
-    }
 
     @Override
     public void onDestroyView() {

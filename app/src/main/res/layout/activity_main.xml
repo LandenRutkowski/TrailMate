@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
-        android:hint="Enter Username"
+        android:hint="@string/enter_username"
         android:importantForAutofill="no"
         android:inputType="textPersonName" />
 
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/idEdtUsername"
         android:layout_margin="10dp"
-        android:hint="Enter password"
+        android:hint="@string/enter_password"
         android:importantForAutofill="no"
         android:inputType="textPassword" />
 
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/idEdtPassword"
         android:layout_margin="10dp"
-        android:hint="Enter email"
+        android:hint="@string/enter_email"
         android:inputType="textEmailAddress" />
 
     <!--Button for adding data to Firebase-->
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/idEdtEmail"
         android:layout_margin="10dp"
-        android:text="Create Account"
+        android:text="@string/create_account"
         android:textAllCaps="false" />
 
     <Button
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/idBtnSendData"
         android:layout_margin="10dp"
-        android:text="Aleady have account? Login"
+        android:text="@string/aleady_have_account_login"
         android:textAllCaps="false" />
 
 </RelativeLayout>

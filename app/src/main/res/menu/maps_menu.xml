@@ -3,10 +3,21 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_showcurrentlocation"
+        android:id="@+id/menu_switch_lang"
         android:orderInCategory="100"
-        android:title="@string/show_location"
-        android:icon="@android:drawable/ic_menu_mylocation"
-        app:showAsAction="ifRoom"/>
+        android:title="@string/switch_language"
+        android:icon="@drawable/baseline_language_24"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menu_english_lang"
+                android:orderInCategory="100"
+                android:title="@string/english_language"/>
+            <item
+                android:id="@+id/menu_arabic_lang"
+                android:orderInCategory="100"
+                android:title="@string/arabic_language"/>
+        </menu>
+    </item>
 
 </menu>

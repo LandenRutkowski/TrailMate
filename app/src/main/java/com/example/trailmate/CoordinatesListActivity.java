@@ -24,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class CoordinatesListActivity extends AppCompatActivity {
+public class CoordinatesListActivity extends MenuActivity {
 
     private ListView mListView;
     private FirebaseDatabase mDatabase;

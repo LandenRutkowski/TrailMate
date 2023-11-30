@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrailMate</string>
+    <string name="title_activity_maps">TrailMate</string>
+    <string name="about">حول</string>
+    <string name="get_location">الحصول على الموقع الحالي</string>
+    <string name="show_location">عرض الموقع الحالي</string>
+    <string name="about_app">حول تريلميت</string>
+    <string name="close">إغلاق</string>
+    <string name="code_credit">© 2023 محمد عبد الجابر ولاندن روتكوفسكي</string>
+    <string name="prefs">الإعدادات</string>
+    <string name="eula_accepted_key">eula_accepted</string>
+    <string name="eula">"<p>باستخدام هذا التطبيق، فإنك توافق على الامتثال لـ <a href="https://developers.google.com/maps/terms">شروط خدمة خرائط Google</a> و <a href="https://www.google.com/intl/en/policies/terms/">شروط خدمة Google</a>.</p><p><strong>سياسة الخصوصية:</strong> بناءً على الطلب، يستخدم هذا التطبيق موقعك لعرضه عبر خرائط Google. إذن الوصول إلى الإنترنت ضروري لهذا الغرض. لا يتم جمع أي معلومات أخرى أو تخزينها أو نقلها.</p> "</string>
+    <string name="accept">قبول</string>
+    <string name="decline">رفض</string>
+    <string name="google_play_text_key">google_play_text</string>
+    <string name="title_activity_maps2">خرائط جديدة</string>
+    <string name="enter_email">أدخل البريد الإلكتروني</string>
+    <string name="enter_password">أدخل كلمة المرور</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="delete">حذف</string>
+    <string name="update">تحديث</string>
+    <string name="description">الوصف</string>
+    <string name="longitude">خط الطول</string>
+    <string name="latitude">خط العرض</string>
+    <string name="title">العنوان</string>
+    <string name="saved_trails">المسارات المحفوظة</string>
+    <string name="add_trails">إضافة مسارات</string>
+    <string name="aleady_have_account_login">هل لديك حساب بالفعل؟ تسجيل الدخول</string>
+    <string name="create_account">إنشاء حساب</string>
+    <string name="enter_username">أدخل اسم المستخدم</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="show_on_map">عرض على الخريطة</string>
+    <string name="save">حفظ</string>
+    <string name="trail_title">عنوان المسار</string>
+</resources>
