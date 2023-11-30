@@ -1,45 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <EditText
         android:id="@+id/editTextTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/title"/>
+        android:hint="@string/title"
+        android:inputType="text"
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/editTextLatitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/latitude"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/editTextLongitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/longitude"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="8dp"/>
+
     <EditText
         android:id="@+id/editTextDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/description"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/buttonUpdateCoordinate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/update"/>
+        android:text="@string/update"
+        android:background="#27ae60"
+        android:textColor="#ffffff"
+        android:elevation="4dp"
+        android:layout_marginBottom="8dp"/>
 
     <Button
         android:id="@+id/buttonDeleteCoordinate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/delete"/>
+        android:text="@string/delete"
+        android:background="#e74c3c"
+        android:textColor="#ffffff"
+        android:elevation="4dp"/>
 
 </LinearLayout>
