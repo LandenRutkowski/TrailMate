@@ -23,7 +23,7 @@ import java.util.Locale;
 
 public class HostActivity extends MenuActivity {
 
-    private Button logout;
+    Button logout;
     private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

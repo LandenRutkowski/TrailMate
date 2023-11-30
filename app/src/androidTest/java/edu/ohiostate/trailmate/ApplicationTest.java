@@ -43,25 +43,44 @@ import java.util.Map;
  */
 @RunWith(AndroidJUnit4.class)
 public class ApplicationTest {
-//	private AddCoordinatesActivity activity = new AddCoordinatesActivity();
-//
-//	@Test
-//	public void onCreate() {
-//
-//
-//		assertNotNull(activity.mTitleEditText);
-//		assertNotNull(activity.mLatitudeEditText);
-//		assertNotNull(activity.mLongitudeEditText);
-//		assertNotNull(activity.mDescriptionEditText);
-//
-//		assertNotNull(activity.mSaveButton);
-//
-//
-//		assertNotNull(activity.mDatabase);
-//
-//
-//		assertNotNull(activity.mRef);
-//	}
+	private AddCoordinatesActivity activity = new AddCoordinatesActivity();
+	private HostActivity hostActivity = new HostActivity();
+
+	@Test
+	public void onCreate() {
+
+
+		assertNotNull(activity.mTitleEditText);
+		assertNotNull(activity.mLatitudeEditText);
+		assertNotNull(activity.mLongitudeEditText);
+		assertNotNull(activity.mDescriptionEditText);
+
+		assertNotNull(activity.mSaveButton);
+
+
+		assertNotNull(activity.mDatabase);
+
+
+		assertNotNull(activity.mRef);
+	}
+
+	@Test
+	public void onClickSaveButton() {
+
+		activity.mSaveButton.performClick();
+
+
+		assertEquals("", activity.mTitleEditText.getText().toString());
+		assertEquals("", activity.mLatitudeEditText.getText().toString());
+		assertEquals("", activity.mLongitudeEditText.getText().toString());
+		assertEquals("", activity.mDescriptionEditText.getText().toString());
+	}
+
+	@Test
+	public void onHostCreate() {
+
+		assertNotNull(hostActivity.logout);
+	}
 
 	private FirebaseAuth firebaseAuth;
 
@@ -101,42 +120,42 @@ public class ApplicationTest {
 		firebaseAuth.signOut();
 	}
 
-//	@Test
-//	public void testAddTrailSuccessful() {
-//
-//		Espresso.onView(ViewMatchers.withId(R.id.save_button)).perform(ViewActions.click());
-//
-//		DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("Coordinates");
-//
-//		Map<String, Object> trailData = new HashMap<>();
-//		trailData.put("name", "Your Trail Name");
-//		trailData.put("location", "Trail Location");
-//		DatabaseReference newTrailRef = dbRef.push();
-//		newTrailRef.setValue(trailData);
-//		String yourTrailId = newTrailRef.getKey();
-//
-//		dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//			@Override
-//			public void onDataChange(@NonNull DataSnapshot snapshot) {
-//				boolean trailAdded = snapshot.hasChild(yourTrailId);
-//
-//				assert trailAdded;
-//			}
-//
-//			@Override
-//			public void onCancelled(@NonNull DatabaseError error) {
-//
-//			}
-//		});
-//	}
+	@Test
+	public void testAddTrailSuccessful() {
 
-//	@Test
-//	public void testDisplayTrailSuccessful() {
-//
-//		Espresso.onView(ViewMatchers.withId(R.id.draw_path)).perform(ViewActions.click());
-//
-//		Espresso.onView(ViewMatchers.withId(R.id.list_view)).check(matches(isDisplayed()));
-//	}
+		Espresso.onView(ViewMatchers.withId(R.id.save_button)).perform(ViewActions.click());
+
+		DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("Coordinates");
+
+		Map<String, Object> trailData = new HashMap<>();
+		trailData.put("name", "Your Trail Name");
+		trailData.put("location", "Trail Location");
+		DatabaseReference newTrailRef = dbRef.push();
+		newTrailRef.setValue(trailData);
+		String yourTrailId = newTrailRef.getKey();
+
+		dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+			@Override
+			public void onDataChange(@NonNull DataSnapshot snapshot) {
+				boolean trailAdded = snapshot.hasChild(yourTrailId);
+
+				assert trailAdded;
+			}
+
+			@Override
+			public void onCancelled(@NonNull DatabaseError error) {
+
+			}
+		});
+	}
+
+	@Test
+	public void testDisplayTrailSuccessful() {
+
+		Espresso.onView(ViewMatchers.withId(R.id.draw_path)).perform(ViewActions.click());
+
+		Espresso.onView(ViewMatchers.withId(R.id.list_view)).check(matches(isDisplayed()));
+	}
 
 
 }
