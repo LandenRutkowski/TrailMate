@@ -13,6 +13,7 @@ import androidx.test.espresso.action.ViewActions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.example.trailmate.models.UserInfo;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,54 +28,13 @@ import org.junit.runner.RunWith;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 /**
  * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
  */
 @RunWith(AndroidJUnit4.class)
 public class ApplicationTest {
-
-	private MainActivity mainActivity;
-	private HostActivity hostActivity;
-	private FirebaseAuth firebaseAuth;
-
-	@Before
-	public void setUp() {
-
-
-	}
-	@Test
-	public void onCreateTrail() {
-
-		CharSequence title = hostActivity.getTitle();
-		assertEquals(title, "Firebase.child.title");
-
-
-//		assertNotNull(activity.mTitleEditText);
-//		assertNotNull(activity.mLatitudeEditText);
-//		assertNotNull(activity.mLongitudeEditText);
-//		assertNotNull(activity.mDescriptionEditText);
-//		assertNotNull(activity.mSaveButton);
-//		assertNotNull(activity.mDatabase);
-//		assertNotNull(activity.mRef);
-	}
-//
-//	@Test
-//	public void onClickSaveButton() {
-//
-//		activity.mSaveButton.performClick();
-//
-//
-//		assertEquals("", activity.mTitleEditText.getText().toString());
-//		assertEquals("", activity.mLatitudeEditText.getText().toString());
-//		assertEquals("", activity.mLongitudeEditText.getText().toString());
-//		assertEquals("", activity.mDescriptionEditText.getText().toString());
-//	}
-//
-//	@Test
-//	public void onHostCreate() {
-//
-//		assertNotNull(hostActivity.logout);
-//	}
 
 	@Test
 	public void testLoginButton() {
