@@ -33,4 +33,8 @@
     <string name="show_on_map">عرض على الخريطة</string>
     <string name="save">حفظ</string>
     <string name="trail_title">عنوان المسار</string>
+    <string name="switch_language">تغيير اللغات</string>
+    <string name="english_language">الإنجليزية</string>
+    <string name="arabic_language">العربية</string>
+    <string name="spanish_language">الإسبانية</string>
 </resources>

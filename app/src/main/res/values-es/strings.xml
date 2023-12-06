@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrailMate</string>
+    <string name="title_activity_maps">TrailMate</string>
+    <string name="about">Acerca de...</string>
+    <string name="get_location">Obtener Ubicación Actual</string>
+    <string name="show_location">Mostrar Ubicación Actual</string>
+    <string name="about_app">Acerca de TrailMate</string>
+    <string name="close">Cerrar</string>
+    <string name="code_credit">© 2023 Muhammad Abedeljaber y Landen Rutkowski</string>
+    <string name="prefs">Preferencias</string>
+    <string name="eula_accepted_key">eula_accepted</string>
+    <string name="eula">"<p>Al utilizar esta aplicación, aceptas cumplir con los <a href="https://developers.google.com/maps/terms">Términos de Servicio de Google Maps</a> y los <a href="https://www.google.com/intl/en/policies/terms/">Términos de Servicio de Google</a>.</p> <p><strong>Política de Privacidad:</strong> A pedido, esta aplicación utiliza tu ubicación para mostrarla a través de Google Maps. Se requiere permiso de acceso a Internet con este propósito. No se recopila, almacena ni transmite ninguna otra información.</p> "</string>
+    <string name="accept">Aceptar</string>
+    <string name="decline">Rechazar</string>
+    <string name="google_play_text_key">google_play_text</string>
+    <string name="title_activity_maps2">Nuevos Mapas</string>
+    <string name="enter_email">Ingresar Correo Electrónico</string>
+    <string name="enter_password">Ingresar Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="delete">Eliminar</string>
+    <string name="update">Actualizar</string>
+    <string name="description">Descripción</string>
+    <string name="longitude">Longitud</string>
+    <string name="latitude">Latitud</string>
+    <string name="title">Título</string>
+    <string name="saved_trails">Rutas Guardadas</string>
+    <string name="add_trails">Agregar Rutas</string>
+    <string name="aleady_have_account_login">¿Ya tienes una cuenta? Iniciar Sesión</string>
+    <string name="create_account">Crear Cuenta</string>
+    <string name="enter_username">Ingresar Nombre de Usuario</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="show_on_map">Mostrar en el Mapa</string>
+    <string name="save">Guardar</string>
+    <string name="trail_title">Título de la Ruta</string>
+    <string name="switch_language">Cambiar Idiomas</string>
+    <string name="english_language">Inglés</string>
+    <string name="arabic_language">Árabe</string>
+    <string name="spanish_language">Español</string>
+</resources>

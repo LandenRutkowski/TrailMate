@@ -43,6 +43,16 @@ public class MenuActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), this.getClass()));
 
         }
+
+        if (itemId == R.id.menu_spanish_lang) {
+            Locale locale = new Locale("es");
+            Locale.setDefault(locale);
+            Configuration config = new Configuration();
+            config.locale = locale;
+            getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+            finish();
+            startActivity(new Intent(getApplicationContext(), this.getClass()));
+        }
         return false;
     }
 }
