@@ -169,7 +169,7 @@ public class CoordinatesListActivity extends MenuActivity {
         });
     }
 
-    private boolean updateCoordinate(String oldTitle, String newTitle, double newLatitude, double newLongitude, String newDescription) {
+    boolean updateCoordinate(String oldTitle, String newTitle, double newLatitude, double newLongitude, String newDescription) {
         DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Coordinates").child(oldTitle);
         Coordinate coordinate = new Coordinate(newTitle, newLatitude, newLongitude, newDescription);
         dR.setValue(coordinate);
@@ -177,7 +177,7 @@ public class CoordinatesListActivity extends MenuActivity {
         return true;
     }
 
-    private boolean deleteCoordinate(String title) {
+    boolean deleteCoordinate(String title) {
         DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Coordinates").child(title);
         dR.removeValue();
         Toast.makeText(getApplicationContext(), "Coordinate Deleted", Toast.LENGTH_LONG).show();
